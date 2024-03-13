@@ -9,15 +9,12 @@ function getComputerChoice() {
         return 'scissor'
     }
 }
-
 let computerSelection;
 let playerSelection;
 let player = 0;
 let computer = 0;
-
 //function to declare a winner, loser or tie of the round
 function playRound(computerSelection, playerSelection) {
-  
     //if to validate the player's selection
     if (playerSelection !== 'rock' && playerSelection !== 'paper' && playerSelection !== 'scissor') {
         return 'Invalid option, please select "rock", "paper", or "scissor"';
@@ -58,8 +55,10 @@ function playGame() {
 //if to declare a winner of all rounds
     if(player > computer){
        console.log ("you win!");
-    }else {
+    }else if(player < computer) {
         console.log("you lose!")
+    }else{
+        console.log("it's a tie!!");
     }
 }
 playGame();
